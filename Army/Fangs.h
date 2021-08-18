@@ -4,13 +4,13 @@
 #include "Weapon.h"
 
 class Fangs : public Weapon {
-    public:
-        int chanceToInfect;
+public:
+	int chanceToInfect;
 
-        Fangs(Unit* owner);
-        ~Fangs();
+	Fangs(Unit* owner);
+	~Fangs();
 
-        void action(Unit* target);
+	void action(Unit* target);
 };
 
 #endif

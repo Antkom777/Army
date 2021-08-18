@@ -6,11 +6,11 @@
 
 class Necromancer : public Spellcaster {
 public:
-    Necromancer(const Point& point = Point(0,0));
-    ~Necromancer();
-    void cast(const std::string& spellName, Unit* target);
-    void attack(Unit* enemy);
-    void takeMagicDamage(int dmg);
+	Necromancer(const Point& point = Point(0, 0));
+	~Necromancer();
+	void cast(const std::string& spellName, Unit* target);
+	void attack(Unit* enemy);
+	void takeMagicDamage(int dmg);
 };
 
 std::ostream& operator<<(std::ostream& out, Necromancer& sc);

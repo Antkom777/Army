@@ -2,40 +2,40 @@
 #include <iostream>
 #include <cmath>
 
-Point::Point(double x, double y) 
-		: x(x), y(y) {}
-Point::~Point(){}
+Point::Point(double x, double y)
+	: x(x), y(y) {}
+Point::~Point() {}
 
-double Point::getX() const{
+double Point::getX() const {
 	return this->x;
 }
 
-double Point::getY() const{
+double Point::getY() const {
 	return this->y;
 }
 
-void Point::setX(double value){
+void Point::setX(double value) {
 	this->x = value;
 }
 
-void Point::setY(double value){
+void Point::setY(double value) {
 	this->y = value;
 }
 
-double Point::distance(const Point& other) const{
+double Point::distance(const Point& other) const {
 	return hypot(this->x - other.x, this->y - other.y);
 }
 
-bool Point::operator==(const Point& other) const{
+bool Point::operator==(const Point& other) const {
 	return this->x == other.x && this->y == other.y;
 
 }
 
-bool Point::operator!=(const Point& other) const{
-	return !operator == (other); 
+bool Point::operator!=(const Point& other) const {
+	return !operator == (other);
 }
 
-std::ostream& operator<<(std::ostream& out, const Point& point){
+std::ostream& operator<<(std::ostream& out, const Point& point) {
 	out << '(' << point.getX() << ", " << point.getY() << ')';
 	return out;
 };

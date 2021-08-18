@@ -9,5 +9,5 @@ Dagger::Dagger(Unit* owner) : Weapon(owner, "Dagger", 20) {
 Dagger::~Dagger() {}
 
 void Dagger::action(Unit* target) {
-    target->takeDamage(damage);
+	target->takeDamage(damage);
 }

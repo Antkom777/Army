@@ -5,11 +5,11 @@
 
 class Soldier : public Unit {
 public:
-	Soldier(const Point& point = Point(0,0));
+	Soldier(const Point& point = Point(0, 0));
 	~Soldier();
 
 	void attack(Unit* enemy);
-	void takeMagicDamage(int dmg); 
+	void takeMagicDamage(int dmg);
 	void changeWeapon();
 };
 

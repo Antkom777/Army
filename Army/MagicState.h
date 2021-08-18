@@ -13,7 +13,7 @@ enum class MagicType {
 
 class MagicState : public State {
 public:
-   
+
 	int mana;
 	int manaMax;
 	MagicType magicType;

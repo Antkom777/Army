@@ -4,11 +4,11 @@
 #include "Spell.h"
 
 class FireBall : public Spell {
-    public:
-    	FireBall(const std::string& name, int cost, int power, int radius = 5);
-        ~FireBall();
+public:
+	FireBall(const std::string& name, int cost, int power, int radius = 5);
+	~FireBall();
 
-        void action(Unit* target);
+	void action(Unit* target);
 };
 
 #endif //FIRE_BALL_H

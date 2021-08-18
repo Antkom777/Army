@@ -36,7 +36,6 @@ set (SOURCES
 )
 
 set (HEADERS
-	"Army.h"
 	"Point.h"
 	"Mount.h"
 	"Location.h"

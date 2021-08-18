@@ -4,11 +4,11 @@
 #include "Weapon.h"
 
 class Bow : public Weapon {
-    public:
-        Bow(Unit* owner);
-        ~Bow();
+public:
+	Bow(Unit* owner);
+	~Bow();
 
-        void action(Unit* target);
+	void action(Unit* target);
 };
 
 #endif

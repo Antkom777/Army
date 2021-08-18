@@ -8,6 +8,6 @@ Bow::Bow(Unit* owner) : Weapon(owner, "Bow", 10, 8) {
 Bow::~Bow() {}
 
 void Bow::action(Unit* target) {
-   	target->takeDamage(damage);
+	target->takeDamage(damage);
 }
 

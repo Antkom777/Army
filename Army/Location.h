@@ -10,26 +10,26 @@ class Unit;
 class Point;
 
 class Location {
-  private:
-    Point address;
-    Unit* token;
+private:
+	Point address;
+	Unit* token;
 
-  public:
+public:
 
-  	Location(const Point& point, Unit* unit = nullptr);
-  	~Location();
+	Location(const Point& point, Unit* unit = nullptr);
+	~Location();
 
-    static std::vector<Location*>* square;
-    static std::vector<Location*>* initSquare();
-    static Location* getFreeLocation();
-    bool isFreeAddress();
-    Unit* getToken();
-    int getIndex(const Point& point);
-    void setToken(Unit* unit);
-    const Point& getAddress();
-    static Location* getPointLocation(const Point& point);
-    static Location* getValidLocation(const Point& point); 
-    static void printLocation();
+	static std::vector<Location*>* square;
+	static std::vector<Location*>* initSquare();
+	static Location* getFreeLocation();
+	bool isFreeAddress();
+	Unit* getToken();
+	int getIndex(const Point& point);
+	void setToken(Unit* unit);
+	const Point& getAddress();
+	static Location* getPointLocation(const Point& point);
+	static Location* getValidLocation(const Point& point);
+	static void printLocation();
 };
 
 std::ostream& operator<<(std::ostream& out, Location& location);

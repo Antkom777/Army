@@ -4,7 +4,7 @@
 
 Mount::Mount(Unit* owner, int speed)
 	:owner(owner), speed(speed) {
-		this->name = "Horse";
-	} 
+	this->name = "Horse";
+}
 Mount::~Mount() {}
 

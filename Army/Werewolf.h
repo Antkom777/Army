@@ -11,12 +11,12 @@ private:
 	Weapon* altWeapon;
 
 public:
-	Werewolf(const Point& point = Point(0,0));
+	Werewolf(const Point& point = Point(0, 0));
 	~Werewolf();
 
 	void attack(Unit* enemy);
 	void transform();
-	void takeMagicDamage(int dmg); 
+	void takeMagicDamage(int dmg);
 };
 
 #endif

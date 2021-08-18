@@ -15,7 +15,7 @@ class Location;
 class Mount;
 
 enum Direction {
-	up,dowr,right,left
+	up, dowr, right, left
 };
 
 class Unit {
@@ -26,12 +26,12 @@ protected:
 	Mount* mount;
 
 public:
-	Unit(State* state, Weapon* weapon,  const Point& point = Point(0,0), Mount* mount = nullptr);
+	Unit(State* state, Weapon* weapon, const Point& point = Point(0, 0), Mount* mount = nullptr);
 	~Unit();
 
 	std::set<Unit*>* observers;
-    std::set<Unit*>* observables;
-	
+	std::set<Unit*>* observables;
+
 	State* getState();
 	Weapon* getWeapon();
 	Location* getLocation();
@@ -42,12 +42,12 @@ public:
 	void setState(State* newState);
 	void setWeapon(Weapon* newWeapon);
 	void addHp(int amount);
-	void takeDamage(int dmg); 
-	virtual void takeMagicDamage(int dmg); 
+	void takeDamage(int dmg);
+	virtual void takeMagicDamage(int dmg);
 
 	void changeWeapon(Weapon* newWeapon);
-	void move(Direction direction = right, int distance = 1 );
-	double getDistance (Unit* target);
+	void move(Direction direction = right, int distance = 1);
+	double getDistance(Unit* target);
 
 	virtual void attack(Unit* enemy) = 0;
 

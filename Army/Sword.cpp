@@ -8,11 +8,12 @@ Sword::Sword(Unit* owner) : Weapon(owner, "Sword", 30, 2) {
 Sword::~Sword() {}
 
 void Sword::action(Unit* target) {
-    target->takeDamage(damage);
-    if (owner->getDistance(target) <= target->getWeapon()->radius) {
-        owner->takeDamage(target->getWeapon()->damage / 2);
-    } else {
-        std::cout << "The enemy can't contrattack, too far" << std::endl;
-    }
+	target->takeDamage(damage);
+	if (owner->getDistance(target) <= target->getWeapon()->radius) {
+		owner->takeDamage(target->getWeapon()->damage / 2);
+	}
+	else {
+		std::cout << "The enemy can't contrattack, too far" << std::endl;
+	}
 }
 

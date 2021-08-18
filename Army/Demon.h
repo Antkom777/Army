@@ -7,15 +7,15 @@
 class Warlock;
 
 class Demon : public Soldier {
-    private:
-        Warlock* master;
+private:
+	Warlock* master;
 
-    public:
-        Demon(Warlock* master);
-        ~Demon();
+public:
+	Demon(Warlock* master);
+	~Demon();
 
-        void takeDamage(int dmg);
-        void takeMagicDamage(int dmg);
+	void takeDamage(int dmg);
+	void takeMagicDamage(int dmg);
 };
 
 #endif // DEMON_H

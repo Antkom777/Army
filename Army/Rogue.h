@@ -5,11 +5,11 @@
 
 class Rogue : public Unit {
 public:
-	Rogue(const Point& point = Point(0,0));
+	Rogue(const Point& point = Point(0, 0));
 	~Rogue();
 
-void attack (Unit* enemy);
-void takeMagicDamage(int dmg);
+	void attack(Unit* enemy);
+	void takeMagicDamage(int dmg);
 
 };
 #endif

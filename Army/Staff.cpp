@@ -11,7 +11,8 @@ void Staff::action(Unit* target) {
 	target->takeDamage(damage);
 	if (owner->getDistance(target) <= target->getWeapon()->radius) {
 		owner->takeDamage(target->getWeapon()->damage / 2);
-	} else {
+	}
+	else {
 		std::cout << "The enemy can't contrattack, too far" << std::endl;
 	}
 }

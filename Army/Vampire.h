@@ -6,7 +6,7 @@
 
 class Vampire : public Unit {
 public:
-	Vampire(const Point& point = Point(0,0));
+	Vampire(const Point& point = Point(0, 0));
 	~Vampire();
 
 	void attack(Unit* enemy);
