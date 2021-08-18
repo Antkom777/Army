@@ -1,4 +1,7 @@
 #include "State.h"
+#include "Exceptions.h"
+#include <iostream>
+
 #define DEBUG 0
 
 State::State(const std::string& label, const std::string& name, int hp, UnitType type, int speed) 

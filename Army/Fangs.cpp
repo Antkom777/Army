@@ -11,8 +11,8 @@ Fangs::~Fangs() {}
 void Fangs::action(Unit* target) {
     target->takeDamage(damage);
     this->owner->addHp(damage / 3);
-    if( chanceToInfect % 2 == 0 && (target->getState()->type != WEREWOLF) && (target->getState()->type != VAMPIRE)) {
-        target->getState()->type = VAMPIRE;
+    if( chanceToInfect % 2 == 0 && (target->getState()->type != UnitType::WEREWOLF) && (target->getState()->type != UnitType::VAMPIRE)) {
+        target->getState()->type = UnitType::VAMPIRE;
         target->setName("(Vampire)");
         target->changeWeapon(new Fangs(target));
     }

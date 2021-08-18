@@ -10,9 +10,9 @@ Claws::~Claws() {}
 
 void Claws::action(Unit* target) {
     target->takeDamage(damage);
-    if( chanceToInfect % 2 == 0 && (target->getState()->type != WEREWOLF) 
-        && (target->getState()->type != VAMPIRE) ) {
-        target->setState(new State("Ww","Werewolf", target->getState()->hp*2, WEREWOLF));
+    if( chanceToInfect % 2 == 0 && (target->getState()->type != UnitType::WEREWOLF) 
+        && (target->getState()->type != UnitType::VAMPIRE) ) {
+        target->setState(new State("Ww","Werewolf", target->getState()->hp*2, UnitType::WEREWOLF));
         target->changeWeapon(new Claws(target));
     }
     chanceToInfect += 1;

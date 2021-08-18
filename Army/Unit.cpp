@@ -2,7 +2,7 @@
 #include "Unit.h"
 #define DEBUG 0
 
-Unit::Unit(State* state, Weapon* weapon, const Point& point, Mount* mount) {
+Unit::Unit(State* state, Weapon* weapon, const Point& point, Mount * mount) {
 	this->state = state;
 	this->weapon = weapon;
 	this->location = NULL;

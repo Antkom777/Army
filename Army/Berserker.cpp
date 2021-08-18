@@ -2,7 +2,7 @@
 #define DEBUG 0
 
 Berserker::Berserker(const Point& point)
-	:Unit(new State("Bs","Berserker", 150, BERSERKER), 
+	:Unit(new State("Bs","Berserker", 150, UnitType::BERSERKER), 
 		new Axe(this)) {
 		this->location = Location::getValidLocation(point);
 		this->location->setToken(this);

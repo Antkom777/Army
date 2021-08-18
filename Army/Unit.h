@@ -2,11 +2,12 @@
 #define UNIT_H
 
 #include <iostream>
+#include <set>
 #include "State.h"
 #include "Weapon.h"
 #include "Location.h"
-#include "Point.h"
 #include "Mount.h"
+#include "Point.h"
 
 class Weapon;
 class State;
@@ -25,7 +26,7 @@ protected:
 	Mount* mount;
 
 public:
-	Unit(State* state, Weapon* weapon, const Point& point = Point(0,0), Mount* mount = NULL);
+	Unit(State* state, Weapon* weapon,  const Point& point = Point(0,0), Mount* mount = nullptr);
 	~Unit();
 
 	std::set<Unit*>* observers;

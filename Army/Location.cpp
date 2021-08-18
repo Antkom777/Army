@@ -1,5 +1,7 @@
 #include <string>
 #include "Location.h"
+#include "Exceptions.h"
+
 #define DEBUG 0
 
 std::vector<Location*>* Location::square = Location::initSquare();

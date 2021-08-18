@@ -23,6 +23,9 @@ set (SOURCES
 	"Berserker.cpp"
 	"Vampire.cpp"
 	"Werewolf.cpp"
+	"Spell.cpp"
+	"MagicState.cpp"
+	"Spellcaster.cpp"
 )
 
 set (HEADERS
@@ -46,6 +49,9 @@ set (HEADERS
 	"Berserker.h"
 	"Vampire.h"
 	"Werewolf.h"
+	"Spell.h"
+	"MagicState.h"
+	"Spellcaster.h"
 )
 # Add source to this project's executable.
 add_executable (Army ${SOURCES} ${HEADERS})

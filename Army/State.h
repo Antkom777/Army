@@ -1,14 +1,9 @@
 #ifndef STATE_H
 #define STATE_H
 
-#include <iostream>
-#include <set>
-#include "Exceptions.h"
-#include "Unit.h"
+#include <string>
 
-class Unit;
-
-enum UnitType {
+enum class UnitType {
 	SOLDIER, // 0
 	ARCHER,
 	DEMON,// 1
