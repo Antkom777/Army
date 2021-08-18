@@ -5,7 +5,7 @@
 Unit::Unit(State* state, Weapon* weapon, const Point& point, Mount * mount) {
 	this->state = state;
 	this->weapon = weapon;
-	this->location = NULL;
+	this->location = nullptr;
 	this->mount = mount;
 	this->observers = new std::set<Unit*>();
     this->observables = new std::set<Unit*>();
@@ -15,7 +15,7 @@ Unit::~Unit() {
 	delete state;
 	delete weapon;
 	delete mount;
-	location->setToken(NULL);
+	location->setToken(nullptr);
 	notifyObservers();
     notifyObservables();
 
@@ -43,13 +43,13 @@ void Unit::setName(const std::string& newName) {
 }
 
 void Unit::setState(State* newState) {
-	if( state != NULL ) {
+	if( state != nullptr ) {
 		delete state;
 	}
 	this->state = newState;
 }
 void Unit::setWeapon(Weapon* newWeapon) {
-	if( weapon != NULL ) {
+	if( weapon != nullptr ) {
 		delete weapon;
 	}
 	this->weapon = newWeapon;
@@ -147,7 +147,7 @@ std::ostream& operator<<(std::ostream& out, Unit& unit) {
 	out << unit.getLocation()->getAddress().getX() <<',';
 	out	<< unit.getLocation()->getAddress().getY() <<')';
 		
-	if (unit.getMount() != NULL) {
+	if (unit.getMount() != nullptr) {
 		out << " MOUNT (" << unit.getMount()->name << ')'; 
 	}
 	return out;

@@ -1,9 +1,6 @@
 #ifndef MAGICSTATE_H
 #define MAGICSTATE_H
 
-#include <iostream>
-#include <set>
-#include "Exceptions.h"
 #include "State.h"
 
 class Spellcaster;

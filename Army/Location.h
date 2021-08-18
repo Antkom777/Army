@@ -16,7 +16,7 @@ class Location {
 
   public:
 
-  	Location(const Point& point, Unit* unit = NULL);
+  	Location(const Point& point, Unit* unit = nullptr);
   	~Location();
 
     static std::vector<Location*>* square;

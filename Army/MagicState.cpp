@@ -1,4 +1,7 @@
 #include "MagicState.h"
+#include <iostream>
+#include "Exceptions.h"
+
 #define DEBUG 0
 
 MagicState::MagicState(int mana, MagicType magicType)

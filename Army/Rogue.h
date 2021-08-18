@@ -2,7 +2,6 @@
 #define ROGUE_H
 
 #include "Unit.h"
-#include "Dagger.h"
 
 class Rogue : public Unit {
 public:

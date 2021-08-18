@@ -1,4 +1,6 @@
 #include "Rogue.h"
+#include "Dagger.h"
+
 #define DEBUG 0
 
 

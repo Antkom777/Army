@@ -26,6 +26,13 @@ set (SOURCES
 	"Spell.cpp"
 	"MagicState.cpp"
 	"Spellcaster.cpp"
+	"FireBall.cpp"
+	"Heal.cpp"
+	"Healer.cpp"
+	"Demon.cpp"
+	"Necromancer.cpp"
+	"Warlock.cpp"
+	"Wizard.cpp"
 )
 
 set (HEADERS
@@ -52,6 +59,13 @@ set (HEADERS
 	"Spell.h"
 	"MagicState.h"
 	"Spellcaster.h"
+	"FireBall.h"
+	"Heal.h"
+	"Healer.h"
+	"Demon.h"
+	"Necromancer.h"
+	"Warlock.h"
+	"Wizard.h"
 )
 # Add source to this project's executable.
 add_executable (Army ${SOURCES} ${HEADERS})

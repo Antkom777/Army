@@ -2,7 +2,6 @@
 #define BERSERKER_H
 
 #include "Unit.h"
-#include "Axe.h"
 
 class Berserker : public Unit {
 public:

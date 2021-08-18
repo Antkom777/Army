@@ -1,9 +1,12 @@
 #include <string>
 #include "Spellcaster.h"
+#include "Staff.h"
+
 #define DEBUG 0
 
 Spellcaster::Spellcaster(MagicState* magicState) : Unit(state, weapon) {
     this->magicState = magicState;
+    this->weapon = new Staff(this);
     if (DEBUG) std::cout << "Spellcaster constructor works" << std::endl;
 }
 

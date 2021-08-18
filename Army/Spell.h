@@ -3,11 +3,6 @@
 
 #include "Unit.h"
 
-// enum SpellType {
-//     BATTLE, // 0
-//     PEACE   // 1
-// };
-
 class Spell {
     protected:
         std::string name;
@@ -17,7 +12,7 @@ class Spell {
 
     public:
         Spell(const std::string& name, int cost = 30, int power = 30, int radius = 1);
-        ~Spell();
+        virtual ~Spell();
 
         int getCost() const;
         int getPower() const;
@@ -25,7 +20,6 @@ class Spell {
         const std::string& getName() const;
         void setPower(int newPower);
         virtual void action(Unit* target) = 0;
-
 };
 
 

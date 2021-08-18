@@ -33,7 +33,7 @@ std::vector<Location*>* Location::initSquare() {
 
 bool Location::isFreeAddress(){
   if (DEBUG) std::cout << "isFreeAddress works" << std::endl;
-  if (this->getToken() == NULL) {
+  if (this->getToken() == nullptr) {
     if (DEBUG)  std::cout << "isFreeAddress works TRUE"<< std::endl;
     return true;
   } else {
@@ -45,7 +45,7 @@ bool Location::isFreeAddress(){
 Location* Location::getFreeLocation() {
     if (DEBUG) std::cout << "getFreeLocation works" << std::endl;
     for (int i = 0; i < square->size(); i++) {
-      if (Location::square->at(i)->getToken() == NULL) {
+      if (Location::square->at(i)->getToken() == nullptr) {
         return Location::square->at(i);
       } 
     }  
@@ -114,7 +114,7 @@ std::cout << "------------------------------------" <<std::endl;
   }  
 };
 std::ostream& operator<<(std::ostream& out, Location& location) {
-  if (location.getToken() == NULL) {
+  if (location.getToken() == nullptr) {
     out << "[  ]"; 
   } else {
     std::cout <<"[" << location.getToken()->getState()->label << "]";

@@ -1,5 +1,8 @@
 #include <string>
 #include "Soldier.h"
+#include "Sword.h"
+#include "Bow.h"
+
 #define DEBUG 0
 
 Soldier::Soldier(const Point& point) 

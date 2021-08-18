@@ -2,8 +2,6 @@
 #define SOLDIER_H
 
 #include "Unit.h"
-#include "Sword.h"
-#include "Bow.h"
 
 class Soldier : public Unit {
 public:

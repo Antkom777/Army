@@ -1,4 +1,6 @@
 #include "Berserker.h"
+#include "Axe.h"
+
 #define DEBUG 0
 
 Berserker::Berserker(const Point& point)
