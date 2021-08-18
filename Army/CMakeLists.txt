@@ -10,7 +10,14 @@ set (SOURCES
 	"Location.cpp"
 	"Weapon.cpp"
 	"State.cpp"
-	"Unit.h"
+	"Unit.cpp"
+	"Axe.cpp"
+	"Bow.cpp"
+	"Claws.cpp"
+	"Dagger.cpp"
+	"Fangs.cpp"
+	"Staff.h"
+	"Sword.h"
 )
 
 set (HEADERS
@@ -21,9 +28,14 @@ set (HEADERS
 	"Weapon.h"
 	"Exceptions.h"
 	"State.h"
-	"Unit.cpp"
+	"Unit.h"
+	"Axe.h"
+	"Bow.h"
+	"Claws.h"
+	"Dagger.h"
+	"Fangs.h"
+	"Staff.h"
+	"Sword.h"
 )
 # Add source to this project's executable.
 add_executable (Army ${SOURCES} ${HEADERS})
-
-# TODO: Add tests and install targets if needed.
