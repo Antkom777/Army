@@ -16,8 +16,13 @@ set (SOURCES
 	"Claws.cpp"
 	"Dagger.cpp"
 	"Fangs.cpp"
-	"Staff.h"
-	"Sword.h"
+	"Staff.cpp"
+	"Sword.cpp"
+	"Soldier.cpp"
+	"Rogue.cpp"
+	"Berserker.cpp"
+	"Vampire.cpp"
+	"Werewolf.cpp"
 )
 
 set (HEADERS
@@ -36,6 +41,11 @@ set (HEADERS
 	"Fangs.h"
 	"Staff.h"
 	"Sword.h"
+	"Soldier.h"
+	"Rogue.h"
+	"Berserker.h"
+	"Vampire.h"
+	"Werewolf.h"
 )
 # Add source to this project's executable.
 add_executable (Army ${SOURCES} ${HEADERS})
