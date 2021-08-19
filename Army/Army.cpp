@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <memory>
 #include "Berserker.h"
 #include "Soldier.h"
 #include "Demon.h"
@@ -17,30 +18,28 @@ using namespace std;
 
 int main()
 {
-
 	if (DEBUG) std::cout << "---- Werewolf--------" << std::endl;
-	if (DEBUG) std::cout << "---- Test--------" << std::endl;
-	Werewolf* ww1 = new Werewolf(Point(2, 2));
+	unique_ptr<Werewolf> ww1(new Werewolf(Point(2, 2)));
 	if (DEBUG) std::cout << "---- Vampire--------" << std::endl;
-	Vampire* v1 = new Vampire(Point(3, 1));
+	unique_ptr<Vampire> v1(new Vampire(Point(3, 1)));
 	if (DEBUG) std::cout << "---- Soldier--------" << std::endl;
-	Soldier* s1 = new Soldier(Point(3, 3));
-	Soldier* s2 = new Soldier(Point(4, 2));
+	unique_ptr<Soldier> s1(new Soldier(Point(3, 3)));
+	unique_ptr<Soldier> s2(new Soldier(Point(4, 2)));
 	if (DEBUG) std::cout << "---- Rogue--------" << std::endl;
-	Rogue* r1 = new Rogue(Point(4, 2));
+	unique_ptr<Rogue> r1(new Rogue(Point(4, 2)));
 	if (DEBUG) std::cout << "---- Berserker--------" << std::endl;
-	Berserker* b1 = new Berserker(Point(5, 7));
+	unique_ptr<Berserker> b1(new Berserker(Point(5, 7)));
 	std::cout << *b1 << std::endl;
 	std::cout << b1->getLocation()->getAddress() << std::endl;
 
 	if (DEBUG) std::cout << "---- Wizard--------" << std::endl;
-	Wizard* wz1 = new Wizard(Point(4, 6));
+	unique_ptr<Wizard> wz1(new Wizard(Point(4, 6)));
 	if (DEBUG) std::cout << "---- Healer --------" << std::endl;
-	Healer* h1 = new Healer(Point(5, 2));
+	unique_ptr<Healer> h1(new Healer(Point(5, 2)));
 	if (DEBUG) std::cout << "---- Necromancer --------" << std::endl;
-	Necromancer* n1 = new Necromancer(Point(5, 6));
+	unique_ptr<Necromancer> n1(new Necromancer(Point(5, 6)));
 	if (DEBUG) std::cout << "---- Warlock --------" << std::endl;
-	Warlock* wk1 = new Warlock(Point(6, 1));
+	unique_ptr<Warlock> wk1(new Warlock(Point(6, 1)));
 
 	std::cout << *ww1 << std::endl;
 	// std::cout << ww1->getLocation()->getAddress() << std::endl;
@@ -65,7 +64,7 @@ int main()
 	std::cout << *b1 << std::endl;
 
 	std::cout << *ww1 << std::endl;
-	n1->cast("FIREBALL", b1);
+	n1->cast("FIREBALL", b1.get());
 	std::cout << *n1 << std::endl;
 	std::cout << *b1 << std::endl;
 	std::cout << *s1 << std::endl;
@@ -74,44 +73,43 @@ int main()
 	std::cout << *b1 << std::endl;
 	std::cout << *s1 << std::endl;
 
-
-
 	try {
-		b1->attack(s1);
+		b1->attack(s1.get());
 	}
 	catch (UnitIsDeadException e) {
+		(void)e;
 		std::cout << "He is dead" << std::endl;
-		delete s1;
+		s1.reset(nullptr);
 	}
-	b1->attack(s1);
+
+	b1->attack(s1.get());
 	std::cout << *n1 << std::endl;
 	std::cout << *b1 << std::endl;
 
-
-
 	try {
-		b1->attack(s1);
+		b1->attack(s1.get());
 	}
 	catch (UnitIsDeadException e) {
+		(void)e;
 		std::cout << "------" << s1->getState()->name
 			<< " is DEAD  ------" << std::endl;
-		delete s1;
+		s1.reset(nullptr);
 	}
+
 	try {
-		b1->attack(s1);
+		b1->attack(s1.get());
 	}
 	catch (UnitIsDeadException e) {
-
+		(void)e;
 		std::cout << "------" << s1->getState()->name << " is DEAD  ------" << std::endl;
-
-		delete s1;
+		s1.reset(nullptr);
 	}
 
 	std::cout << *n1 << std::endl;
 	std::cout << *ww1 << std::endl;
 	ww1->transform();
 	std::cout << *ww1 << std::endl;
-	b1->attack(ww1);
+	b1->attack(ww1.get());
 	std::cout << *ww1 << std::endl;
 	ww1->transform();
 	std::cout << *ww1 << std::endl;
@@ -120,7 +118,7 @@ int main()
 
 
 	std::cout << *h1 << std::endl;
-	h1->cast("HEAL", v1);
+	h1->cast("HEAL", v1.get());
 	std::cout << *h1 << std::endl;
 	std::cout << *v1 << std::endl;
 
@@ -136,8 +134,8 @@ int main()
 	wk1->summon();
 	std::cout << *wk1 << std::endl;
 
-	s1->attack(r1);
-	ww1->attack(s1);
+	s1->attack(r1.get());
+	ww1->attack(s1.get());
 
 	ww1->transform();
 
@@ -156,29 +154,17 @@ int main()
 	std::cout << "\n--Berserker attacks Necromancer ---" << std::endl;
 	std::cout << *n1 << std::endl;
 	std::cout << *b1 << std::endl;
-	b1->attack(n1);
+	b1->attack(n1.get());
 	std::cout << *n1 << std::endl;
 	std::cout << *b1 << std::endl;
 
 	std::cout << "\n--Berserker attacks Healer ---" << std::endl;
 	std::cout << *b1 << std::endl;
 	std::cout << *h1 << std::endl;
-	b1->attack(h1);
+	b1->attack(h1.get());
 	std::cout << *b1 << std::endl;
 	std::cout << *h1 << std::endl;
 	Location::printLocation();
-
-	delete ww1;
-	delete v1;
-	delete r1;
-	delete b1;
-	delete wz1;
-	delete h1;
-	delete n1;
-	delete b3;
-	delete wk1;
-	delete s1;
-	delete s2;
 
 	cin.get();
 	return 0;
