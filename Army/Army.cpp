@@ -11,6 +11,7 @@
 #include "Warlock.h"
 #include "Wizard.h"
 #include "Exceptions.h"
+#include "Battlefield.h"
 
 #define DEBUG 0
 
@@ -164,7 +165,7 @@ int main()
 	b1->attack(h1.get());
 	std::cout << *b1 << std::endl;
 	std::cout << *h1 << std::endl;
-	Location::printLocation();
+	Battlefield::getInstance().printBattlefield();
 
 	cin.get();
 	return 0;

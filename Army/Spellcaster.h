@@ -17,7 +17,7 @@ protected:
 	MagicState* magicState;
 
 public:
-	Spellcaster(MagicState* magicState);
+	Spellcaster(MagicState* magicState, const Point& point);
 	~Spellcaster();
 
 	const std::map<std::string, Spell*>& getSpellbook() const;

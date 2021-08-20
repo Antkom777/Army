@@ -1,14 +1,13 @@
 #include "Werewolf.h"
+
 #define DEBUG 0
 
 Werewolf::Werewolf(const Point& point)
-	: Unit(new State("Ww", "Werewolf", 100, UnitType::SOLDIER), new Sword(this)) {
+	: Unit(new State("Ww", "Werewolf", 100, UnitType::SOLDIER), new Sword(this),point) {
 	this->altState = new State("Ww", "Werewolf", 200, UnitType::WEREWOLF);
 	this->altWeapon = new Claws(this);
 	if (DEBUG) std::cout << "Werewolf constructor works" << std::endl;
-	this->location = Location::getValidLocation(point);
 	this->location->setToken(this);
-
 }
 
 Werewolf::~Werewolf() {

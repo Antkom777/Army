@@ -5,10 +5,9 @@
 #define DEBUG 0
 
 Necromancer::Necromancer(const Point& point)
-	: Spellcaster(new MagicState(100, MagicType::PEACE))
+	: Spellcaster(new MagicState(100, MagicType::PEACE),point)
 {
 	state = new State("Nc", "Necromancer", 60, UnitType::NECROMANCER);
-	this->location = Location::getValidLocation(point);
 	this->location->setToken(this);
 
 	if (DEBUG) std::cout << "Necromancer constructor works" << std::endl;

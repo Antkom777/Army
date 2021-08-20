@@ -6,8 +6,7 @@
 #define DEBUG 0
 
 Soldier::Soldier(const Point& point)
-	: Unit(new State("Sr", "Soldier", 100, UnitType::SOLDIER), new Sword(this)) {
-	this->location = Location::getValidLocation(point);
+	: Unit(new State("Sr", "Soldier", 100, UnitType::SOLDIER), new Sword(this), point) {
 	if (DEBUG) std::cout << "Soldier constructor works" << std::endl;
 	if (DEBUG) std::cout << this->location->getToken() << std::endl;
 	this->location->setToken(this);

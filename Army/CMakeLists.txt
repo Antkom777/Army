@@ -33,7 +33,7 @@ set (SOURCES
 	"Necromancer.cpp"
 	"Warlock.cpp"
 	"Wizard.cpp"
-)
+ "Battlefield.cpp")
 
 set (HEADERS
 	"Point.h"
@@ -65,6 +65,7 @@ set (HEADERS
 	"Necromancer.h"
 	"Warlock.h"
 	"Wizard.h"
+	"Battlefield.h"
 )
 # Add source to this project's executable.
 add_executable (Army ${SOURCES} ${HEADERS})

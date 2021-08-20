@@ -5,8 +5,7 @@
 
 Berserker::Berserker(const Point& point)
 	:Unit(new State("Bs", "Berserker", 150, UnitType::BERSERKER),
-		new Axe(this)) {
-	this->location = Location::getValidLocation(point);
+		new Axe(this), point) {
 	this->location->setToken(this);
 
 }

@@ -5,11 +5,10 @@
 #define DEBUG 0
 
 Warlock::Warlock(const Point& point)
-	: Spellcaster(new MagicState(100, MagicType::PEACE))
+	: Spellcaster(new MagicState(100, MagicType::PEACE),point)
 {
 	state = new State("Wk", "Warlock", 60, UnitType::WARLOCK);
 	weapon = new Staff(this);
-	this->location = Location::getValidLocation(point);
 	this->location->setToken(this);
 	this->slave = nullptr;
 	addSpell(new FireBall("FIREBALL", 30, 15));

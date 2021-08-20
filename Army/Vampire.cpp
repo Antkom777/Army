@@ -1,10 +1,10 @@
 #include "Vampire.h"
+
 #define DEBUG 0
 
 Vampire::Vampire(const Point& point) 
-	: Unit(new State("Vm","Vampire", 100, UnitType::VAMPIRE), new Fangs(this)) {
+	: Unit(new State("Vm","Vampire", 100, UnitType::VAMPIRE), new Fangs(this), point) {
 		if (DEBUG) std::cout << "Vampire constructor works" << std::endl;
-		this->location = Location::getValidLocation(point);
 		this->location->setToken(this);
 }
 	

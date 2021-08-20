@@ -5,9 +5,8 @@
 
 
 Rogue::Rogue(const Point& point)
-	:Unit(new State("Rg", "Rogue", 80, UnitType::ROGUE), new Dagger(this)) {
+	:Unit(new State("Rg", "Rogue", 80, UnitType::ROGUE), new Dagger(this),point) {
 	if (DEBUG) std::cout << "Rogue constructor works" << std::endl;
-	this->location = Location::getValidLocation(point);
 	this->location->setToken(this);
 
 }

@@ -4,7 +4,7 @@
 
 #define DEBUG 0
 
-Spellcaster::Spellcaster(MagicState* magicState) : Unit(state, weapon) {
+Spellcaster::Spellcaster(MagicState* magicState, const Point& point) : Unit(state, weapon, point) {
 	this->magicState = magicState;
 	this->weapon = new Staff(this);
 	if (DEBUG) std::cout << "Spellcaster constructor works" << std::endl;

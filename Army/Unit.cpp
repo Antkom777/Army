@@ -1,11 +1,12 @@
 #include <string>
 #include "Unit.h"
+#include "Battlefield.h"
 #define DEBUG 0
 
 Unit::Unit(State* state, Weapon* weapon, const Point& point, Mount* mount) {
 	this->state = state;
 	this->weapon = weapon;
-	this->location = nullptr;
+	this->location = Battlefield::getInstance().getValidLocation(point);
 	this->mount = mount;
 	this->observers = new std::set<Unit*>();
 	this->observables = new std::set<Unit*>();

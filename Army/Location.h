@@ -18,13 +18,10 @@ public:
 
 	Location(const Point& point, Unit* unit = nullptr);
 	~Location();
-
-	static std::vector<Location*>* square;
-	static std::vector<Location*>* initSquare();
+	
 	static Location* getFreeLocation();
 	bool isFreeAddress();
 	Unit* getToken();
-	int getIndex(const Point& point);
 	void setToken(Unit* unit);
 	const Point& getAddress();
 	static Location* getPointLocation(const Point& point);
