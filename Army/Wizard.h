@@ -2,7 +2,7 @@
 #define WIZARD_H
 
 #include "Spellcaster.h"
-#include "Fireball.h"
+#include "FireBall.h"
 #include "Heal.h"
 
 class Wizard : public Spellcaster {

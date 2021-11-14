@@ -1,4 +1,4 @@
-#include "Fireball.h"
+#include "FireBall.h"
 #define DEBUG 0
 
 FireBall::FireBall(const std::string& name, int cost, int power, int radius)

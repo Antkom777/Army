@@ -9,7 +9,7 @@ public:
 		static Battlefield instance;
 		return instance;
 	}
-	Location* Battlefield::getValidLocation(const Point& point);
+    Location* getValidLocation(const Point& point);
 	void printBattlefield();
 
 private:

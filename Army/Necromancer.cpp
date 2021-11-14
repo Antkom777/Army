@@ -1,6 +1,6 @@
 #include <string>
 #include "Necromancer.h"
-#include "Fireball.h"
+#include "FireBall.h"
 
 #define DEBUG 0
 

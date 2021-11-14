@@ -2,7 +2,7 @@
 #define HEALER_H
 
 #include "Spellcaster.h"
-#include "Fireball.h"
+#include "FireBall.h"
 #include "Heal.h"
 
 class Healer : public Spellcaster {
